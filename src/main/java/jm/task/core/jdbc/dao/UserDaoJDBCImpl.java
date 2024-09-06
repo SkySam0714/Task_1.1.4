@@ -71,7 +71,7 @@ public class UserDaoJDBCImpl implements UserDao {
         try(PreparedStatement preparedStatement = Util.getConnection().prepareStatement(DELETE_USER_BY_ID)) {
             preparedStatement.setLong(1, id);
             preparedStatement.execute();
-            LOGGER.info("User with id: " + id + " - was added to database");
+            LOGGER.info("User with id: " + id + " - was removed from database");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
