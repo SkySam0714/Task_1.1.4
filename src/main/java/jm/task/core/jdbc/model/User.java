@@ -1,8 +1,6 @@
 package jm.task.core.jdbc.model;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table
 public class User {
@@ -32,24 +30,24 @@ public class User {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId(Long a_id) {
+        this.id = a_id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String b_name) {
+        this.name = b_name;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastName(String c_lastName) {
+        this.lastName = c_lastName;
     }
 
     public Byte getAge() {
@@ -58,5 +56,10 @@ public class User {
 
     public void setAge(Byte age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return id.toString() + " " + name + " " + lastName + " " + age.toString();
     }
 }
